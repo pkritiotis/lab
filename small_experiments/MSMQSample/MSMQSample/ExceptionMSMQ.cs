@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Messaging;
 
-namespace ConsoleApplication1
+namespace ExceptionMSMQ
 {
     public class ExceptionMSMQ
     {
@@ -47,7 +47,7 @@ namespace ConsoleApplication1
             ExceptionQueue.Send(message);
         }
 
-        private static List<string> RetrieveMessages()
+        public static List<string> RetrieveMessages()
         {
             List<string> messages = new List<string>();
             using (ExceptionQueue)
